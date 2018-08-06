@@ -75,7 +75,7 @@
     <div class="container-fluid no-padding" >
 
       <!-- <div id="banner-wrapper"> -->
-        <div id="scroll-top">
+        <div id="scroll-top" class="scr_trig">
 
           <div class="img_wrap">
             <img alt="banner" src="img/banner.jpg"  />
@@ -90,7 +90,7 @@
       <div class="clearfix"></div> 
 
 
-      <div class="container">
+      <div class="container scr_trig">
         <div class="row">
           <div class="text-center works-text">
             <h3>HOW WE ENSURE YOU FLOAT?</h3>
@@ -101,7 +101,7 @@
 
           <div class="col-md-offset-1 col-md-4 col-sm-4 fg_block pull-left  no-padding anm center-col-50per" id="float-block">
             <a href="bike.html"><img alt="float-img" src="img/block-1.jpg" width="100%" height="100%"/></a>
-            <div class="head">
+            <div class="head scrollflow -slide-top">
               <h3>FLOAT</h3>
               <h4>for bikes</h4>
             </div>
@@ -113,7 +113,7 @@
 
           <div class="col-md-4 col-sm-4 col-md-offset-1 fg_block pull-left no-padding anm center-col-50per">
             <a href="car.html"><img alt="float-img" src="img/block-2.jpg" width="100%" height="100%"/></a>
-            <div class="head">
+            <div class="head scrollflow -slide-top">
               <h3>FLOAT</h3>    
               <h4>for cars</h4>
             </div>
@@ -607,11 +607,12 @@
           <script type="text/javascript" src="js/bootstrap.min.js"></script> 
           <script type="text/javascript" src="js/main.js"></script>
           <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.5/slick.min.js"></script>
+          <script type="text/javascript" src="./js/jquery.scrollify.js"></script>
+        <script type="text/javascript" src="js/scrollflow.min.js"></script>
 
           <script type="text/javascript">
-
             $(document).ready(function() {
-
+              $("html,body").scrollTop(100);  
               $('.introVid').hide();
               $('.play').on( "click", function() {
                 $('.introVidImg').hide();
@@ -769,6 +770,15 @@ function topFunction() {
 }
 
 </script>          <!-- footer code end -->  
-
+<script>
+        $(function() {
+          $.scrollify({
+            section : ".scr_trig",
+            offset : 0
+          });
+            
+        });
+    
+      </script>
 </body>
 </html>
